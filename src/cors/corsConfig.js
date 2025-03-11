@@ -1,6 +1,8 @@
 const cors = require("cors");
 
 const allowedOrigins = [
+    'https://e-commerce-angular-fe.vercel.app/',
+    'https://e-commerce-angular-fe.vercel.app',
     'https://e-commerce-by-r9f5lau5y-iesparagjaingmailcoms-projects.vercel.app',
     'http://localhost:4200', // Development frontend
     

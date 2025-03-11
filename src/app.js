@@ -8,14 +8,14 @@ const cors = require("cors");
 const {corsMiddleware} = require("./cors/corsConfig");
 const { handlePaymentWebhook } = require("./controllers/buyerController/payment.buyer.controller");
 
-app.use(cors("*"));
+app.use(corsMiddleware);
+app.options("*", corsMiddleware); 
 app.post(
   "/api/v1/buyer/payment/webhook",
   express.raw({ type: "application/json" }),
   handlePaymentWebhook
 );
 
-// Use JSON parser for all other routes
 app.use(bodyParser.json());
 // app.use(bodyParser.json());
 app.use(morgan("dev"));
