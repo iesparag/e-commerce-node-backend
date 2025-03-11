@@ -8,7 +8,7 @@ const cors = require("cors");
 const {corsMiddleware} = require("./cors/corsConfig");
 const { handlePaymentWebhook } = require("./controllers/buyerController/payment.buyer.controller");
 
-app.use(corsMiddleware);
+app.use(cors("*"));
 app.post(
   "/api/v1/buyer/payment/webhook",
   express.raw({ type: "application/json" }),
