@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
-    "build": "babel src -d dist",
+    "build": "npx babel src -d dist",
     "dev": "cross-env NODE_ENV=development node src/index.js",
     "prod": "cross-env NODE_ENV=production node src/index.js",
     "personal": "cross-env NODE_ENV=personal node src/index.js",
